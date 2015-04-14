@@ -1,0 +1,1398 @@
+@import "bourbon/bourbon"
+
+body
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: none
+
+section,
+.main_head
+	position: relative
+	h3
+		text-align: center
+		text-transform: uppercase
+		font-weight: 400
+		font-size: 12px
+		margin-top: 0
+		margin-bottom: 35px
+
+
+section
+	//padding: 70px 0 90px
+	padding: 70px 0 20px
+	h2
+		text-align: center
+		font-size: 24px
+		text-transform: uppercase
+		margin: 0 0 15px
+	.personal_header
+		font-size: 13px
+		text-align: left
+		margin-bottom: 30px	
+		color: #555
+
+.s_descr_wrap
+	text-align: center
+	.s_descr 
+		display: inline-block
+		text-transform: uppercase
+		font-size: 12px
+		position: relative
+		margin-bottom: 130px
+		&::after
+			content: ""
+			width: 150px
+			height: 1px
+			position: absolute
+			left: 50%
+			margin-left: -75px
+			margin-top: 60px
+
+
+
+.main_head
+	height: 620px
+	padding-top: 20px
+	
+	
+.loader 
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner 
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+.logo_container
+	float: left
+
+//svg
+//opacity: 1
+//	height: 32px
+//	width: 32px
+	//z-index: 100
+	//position: relative
+
+.main_about
+	p
+		position: relative
+		text-align: center
+		vertical-align: middle
+		margin: 0
+		z-index: 50
+.toggle_mnu
+	width: 60px
+	height: 60px
+	position: fixed
+	z-index: 100
+	border: none
+	right: 20px
+	top: 20px
+	span
+		display: block
+
+$w: 34px
+$h: 3px
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 10px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 101
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	display: block
+
+	//* transition-delay: 0.2s, 0s;
+
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s 
+
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4.5
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+
+.sandwich.active 
+	.sw-topper
+		top: 9px
+		transform: rotate(135deg)
+	.sw-bottom
+		top: 6px
+		transform: rotate(-135deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.top_mnu
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0, .9)
+	z-index: 50
+	right: 0
+	top: 0
+	display: none
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 180px
+		text-align: center
+		li
+			&:nth-child(1) a
+				+animation-duration(.5s)
+			&:nth-child(2) a
+				+animation-duration(1s)
+			&:nth-child(3) a
+				+animation-duration(1.5s)
+			&:nth-child(4) a
+				+animation-duration(2s)
+		a
+			color: #fff
+			display: block
+			text-transform: uppercase
+			font-size: 12px
+			opacity: 0
+			position: relative
+			height: 60px
+			
+			span
+				display: block
+				position: relative
+				top: -40px
+				left: 0
+				height: 100%
+				+transition(all 0.5s ease)
+				&:hover
+					background-color: rgba(255,255,255, .08)
+					
+			
+.top_wrapper
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	.top_descr
+		display: table-row
+		.top_centered		
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+	.top_text
+		display: inline-block
+		p
+			margin: 0
+			text-transform: uppercase
+			+animation-delay(1.5s)
+			
+
+		h1
+			display: inline-block
+			//padding: 10px 35px 
+			color: #fff
+			//border: 8px solid #fff
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 6em
+			//background-color: rgba(0,0,0,.4)
+			margin-bottom: 10px
+			margin-left: 0px
+			margin-right: 0px
+			+animation-delay(1s)
+		h2
+			//display: inline-block
+			//padding: 10px 35px 5px
+			color: #fff
+			//border: 8px solid #fff
+			margin: 0
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 1em
+			+animation-delay(1s)
+
+.toggle_mnu
+	background-color: #000
+
+.main_footer
+	padding: 50px 0
+	font-size: 13px
+	font-weight: 300
+	.social_wrap_foot
+		width: 160px
+		height: 60px
+		//position: absolute
+		z-index: 100
+		border: none
+		float: right
+		padding: 0
+		//vertical-align: center
+		//background-color: #000
+		//left: -20px
+		//top: 10px
+		ul
+			padding-left: 13px
+		li
+			display: inline-block
+			font-size: 28px
+			padding: 0 3px
+			float: right
+			line-height: 0
+		ul
+			margin: 0
+
+
+.person
+	text-align: center
+	img
+		max-width: 220px
+		display: inline-block
+		border-radius: 50%
+.s_about
+	p
+		margin-bottom: 25px
+	ul,
+	li
+		margin: 0
+		padding: 0
+		list-style-type: none
+	li
+		margin-bottom: 10px
+
+
+.social_wrap
+	width: 160px
+	height: 60px
+	position: absolute
+	z-index: 100
+	border: none
+	//vertical-align: center
+	background-color: #000
+	//left: -20px
+	//top: 10px
+	ul
+		padding-left: 13px
+	li
+		display: inline-block
+		font-size: 28px
+		padding: 0 3px
+		
+//$baseline: 24px
+
+// Icon controllers
+//$icon-size: 50px
+//$icon-stroke-width: 3px
+
+//$icon-trans: all .3s ease
+.top_centered_bottom
+	display: table-cell
+	text-align: center
+	vertical-align: bottom
+
+.wrapper,
+.wrapper-dark
+	width: 50px
+	height: 100px
+	margin: auto
+	clear: both
+	overflow: hidden
+	//padding-top: 250px
+	z-index: 102
+	//margin-top: 450px
+	
+	box-sizing: border-box
+
+.video
+	position: relative
+	width: 100%
+	height: 100%
+	text-align: center
+
+
+.landing-page
+	display: block
+	//color: #6bc361
+	//svg
+	//	fill: #6bc361
+	.location-detail 
+		color: #4f9edb
+		stroke: #4f9edb
+		p
+			color: #4f9edb
+		svg
+			fill: #4f9edb
+	.book-detail
+		color: #6bc361
+		stroke: #6bc361
+		p
+			color: #6bc361
+		svg
+			fill: #6bc361
+	.themes-detail
+		color: #41bfe9
+		stroke: #41bfe9	
+		p
+			color: #41bfe9
+		svg
+			fill: #41bfe9
+	.statistics-item 
+		text-align: center
+		//width: 33.3%
+		//float: left
+		//height: 10em
+		padding-top: 3em
+		padding-bottom: 1em
+		position: relative
+		border-right: solid 1px rgba(107,107,107,.1)
+		svg
+			margin-top: 1.3em
+			width: 5.625em
+			height: 5.625em
+		h1
+			font-size: 3.8em
+
+		.statistics-inner-item
+			margin-left: -.5em
+			display: inline-block
+			vertical-align: middle
+			cursor: pointer
+
+			.icon-wrap
+				float: left
+				//transform: translate3d(0px ,0px, 0px)
+				opacity: 1
+				//transform-origin: 50% 50% 0px
+					
+				.icon-border 
+					fill: none
+					//transform-origin: 50% 50% 0px
+					position: absolute
+					stroke-width: 2
+					overflow: visible
+				.statistics-btn-icon
+					//transform: matrix(1, 0, 0, 1, 0, 0)
+			
+			.statistics-copy 
+				float: left
+				margin-left: 1em
+			
+.wide-spacing 
+	letter-spacing: .0625em
+
+.uppercase 
+	text-transform: uppercase
+
+.tally
+	margin: 0
+	padding: 0
+	position: relative
+	text-align: center
+.title
+	font-size: 1em
+	text-align: center
+	//margin-top: 4px
+	padding: 0
+	margin: 0
+
+.down-btn
+	visibility: inherit
+	bottom: 5%
+	left: 50%
+	margin-left: -2.125em
+	position: absolute
+	z-index: 800!important
+	width: 4.25em
+	height: 4.25em
+	cursor: pointer
+	.down-btn-inner
+		width: 4.25em
+		height: 4.25em
+		//border: .225em solid #41bfe9
+		//border: .225em solid #9e9e9e
+		position: absolute
+	//.icon-arrow
+	.icon-outer
+		border-radius: 50%
+		width: 4.125em
+		height: 4.125em
+	.down-btn-icon
+		transform: rotate(90deg)
+		width: 1em
+		height: 2em
+		//fill: #41bfe9
+		//fill: #9e9e9e
+		margin: 1.275em 0 0 1.5525em
+	
+
+.section-description,
+.section-description-dark
+	margin-bottom: 3.5em
+	p
+		text-align: center
+		//color: #9e9e9e
+		padding: 0 8em
+		margin: 0
+	h2
+		font-weight: 400
+		font-size: 2.5em
+		display: inline-block
+		top: -.25em
+		position: relative
+	
+	.section-title
+		position: relative
+		text-align: center
+		margin-bottom: .5em
+	.section-icon
+		position: relative
+		display: inline-block
+		margin-right: .875em
+	.icon-outer
+		//border: .125em solid #fff
+		border-radius: 50%
+		width: 3.125em
+		height: 3.125em
+	.icon-inner
+		//fill: #fff
+
+
+//Portfolio css
+.s_portfolio
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+		text-align: center
+	li
+		display: inline-block
+		margin: 0 10px
+		text-transform: uppercase
+		font-size: 12px
+		cursor: pointer
+		line-height: 2
+	ul
+		margin-bottom: 50px
+
+.portfolio_item
+	display: none
+	padding: 0
+	img
+		width: 100%
+	.port_item_cont
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,.8)
+		text-align: center
+		padding-top: 15%
+		opacity: 0
+		transition: all .5s
+	&:hover .port_item_cont
+		opacity: 1
+		padding-top: 20%
+	h3
+		color: #fff
+		margin-bottom: 0
+	a
+		background-color: transparent
+		border: #fff 1px solid
+		padding: 2px 10px
+		display: inline-block
+
+.podrt_descr
+	background-color: #fff
+	max-width: 500px
+	margin: auto
+	p,
+	h3
+		padding: 20px
+		padding-bottom: 0
+	h3
+		margin-bottom: 0
+		text-align: center
+		text-transform: uppercase
+		font-weight: 400
+		margin-top: 20px
+		padding-top: 25px
+	p
+		margin-top: 0
+	img
+		width: 100%
+		margin-top: 10px
+
+.modal-box-content
+	position: relative
+
+
+.resume_container
+	.left .resume_description strong
+		margin-left: 10px
+	.right .resume_description strong
+		margin-right: 10px
+	.left
+		text-align: right
+		border-right: #d2d2d2 1px solid
+		h3
+			text-align: right
+	.right
+		text-align: left
+		h3
+			text-align: left
+	h3
+		margin-top: 30px
+	.year
+		font-weight: 600
+		font-style: italic
+		display: inline-block
+		padding: 0 15px
+		margin-bottom: 15px
+	strong
+		font-weight: 600
+		font-style: normal
+		text-transform: uppercase
+	.resume_description
+		font-style: italic
+	.resume_item
+		margin-bottom: 40px
+		p
+			margin-top: 10px
+		&:last-child
+			margin-bottom: 0
+			p
+				margin-bottom: 0
+
+.resume_icon
+	font-size: 40px
+	margin-bottom: 35px
+	.year
+		display: inline-block
+		margin-bottom: 15px
+		padding: 0 10px
+
+
+.center
+	//position: absolute
+	top: 50%
+	left: 50%
+
+.person_mnu
+	text-align: center
+	img
+		max-width: 70px
+		display: inline-block
+		border-radius: 50%
+		border: 3px
+		//border-color: #B03838
+		border-color: #0088EA
+		border-style: outset
+
+//#video-section
+//	position: absolute
+
+
+#video
+	background: #000
+	position: relative
+	top: 0
+	left: 0
+	padding: 0
+	z-index: 1000
+	display: block
+	overflow: hidden
+
+	.video-container
+		position: absolute
+		width: 100%
+		height: 100%
+
+		//.video-player-inner
+	.mnu-inner
+		position: absolute
+		padding: 0
+		//margin: 0 auto
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 16em
+		text-align: center
+		background-color: rgba(#fff, .1)
+		z-index: 1020
+		.mnu-footer
+			ul
+				list-style: none
+				margin: 0 auto
+				width: 100%
+				padding: 0
+
+			li
+				width: 100px
+				height: 8em
+				display: inline-block
+				margin-top: 0
+				vertical-align: top
+				//margin-bottom: 15px
+				//padding-bottom: 15px
+				.mnu-item
+					opacity: .3
+					&:hover
+						opacity: 1
+					h3
+						padding-top: 5px
+						//text-align: center
+						//text-transform: uppercase
+						font-weight: 600
+						font-size: 1em
+						margin: 0
+						letter-spacing: 1px
+						color: #666
+	//		a
+	//			float: left
+	//			border-left: 2 px solid #fff
+//				text-align: center		
+			
+.top_wrapper2
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	//background-color: rgba(#fff, 0.7)
+	opacity: 1
+
+
+	.top_descr2
+		display: table-row
+		.top_centered2	
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+			//padding-top: 18em
+	.top_text2
+		display: inline-block
+		p
+			margin: 0
+			text-transform: uppercase
+			+animation-delay(1.5s)
+			
+
+		h1
+			display: inline-block
+			//padding: 10px 35px 
+			color: #0088EA
+			//border: 8px solid #fff
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 6em
+			//background-color: rgba(0,0,0,.4)
+			margin-bottom: 0px
+			margin-left: 0px
+			margin-right: 0px
+			+animation-delay(1s)
+			
+		h2
+			//display: inline-block
+			//padding: 10px 35px 5px
+			color: #0088EA
+			//border: 8px solid #fff
+			margin: 0
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 3em
+			+animation-delay(2s)
+		h3
+			color: #0088EA
+			margin: 0
+			text-transform: uppercase
+			font-weight: 300
+			font-size: 2em
+			+animation-delay(3s)
+		h4
+			color: #0088EA
+			margin: 0
+			text-transform: uppercase
+			font-weight: 300
+			font-size: 1em
+			+animation-delay(4s)
+
+
+.os-phrases h2 
+	//font-family: 'Dosis', 'Lato', sans-serif
+	font-size: 70px
+	//font-weight: 200
+	width: 100%
+	overflow: hidden
+	text-transform: uppercase
+	padding: 0
+	margin: 0
+	position: absolute
+	//top: 0
+	//left: 0
+	letter-spacing: 14px
+	text-align: center
+
+
+.os-phrases h2,
+.os-phrases h2 
+	span 
+		height: 100%
+		/* Centering with flexbox */
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+
+
+.os-phrases h2 > span 
+	margin: 0 15px
+
+
+.os-phrases h2 > span > span 
+	display: inline-block
+	perspective: 1000px
+	transform-origin: 50% 50%
+
+
+.os-phrases h2 > span > span > span 
+	display: inline-block
+	color: hsla(0,0%,0%,0)
+	transform-style: preserve-3d
+	transform: translate3d(0,0,0)
+	animation: OpeningSequence 4.2s linear forwards
+
+
+.os-phrases h2:nth-child(2) > span > span > span 
+	font-size: 100px
+	+animation-delay (4s)
+
+
+.os-phrases h2:nth-child(3) > span > span > span 
+	font-size: 30px
+	animation: FadeInOut 6s linear 9s forwards
+
+.os-phrases h2:nth-child(4) > span > span > span 
+	+animation-delay (15s)
+
+
+.os-phrases h2:nth-child(5) > span > span > span 
+	font-size: 100px
+	+animation-delay (19s)
+	+animation-duration (8s)
+
+.os-phrases h2:nth-child(6) > span > span > span 
+	font-size: 150px
+	animation: OpeningSequenceIn 4s linear 27s forwards
+	//-webkit-animation-delay: 34s;
+	//-moz-animation-delay: 34s;
+	//animation-delay: 34s;
+	//-webkit-animation-duration: 8s;
+	//-moz-animation-duration: 8s;
+	//animation-duration: 8s;
+
+
+
+@keyframes OpeningSequenceIn 
+	0% 
+		text-shadow: 0 0 50px #fff
+		letter-spacing: 80px
+		opacity: 0.2
+		transform: rotateY(-90deg)
+	
+	100% 
+		text-shadow: 0 0 1px #fff
+		letter-spacing: 14px
+		opacity: 0.8
+		transform: rotateY(0deg)
+	
+
+
+
+
+
+.os-phrases h2:nth-child(7) > span > span > span 
+	+animation-delay (38s)
+
+
+@keyframes OpeningSequence 
+	0% 
+		text-shadow: 0 0 50px #fff
+		letter-spacing: 80px
+		opacity: 0.2
+		transform: rotateY(-90deg)
+	
+	50% 
+		text-shadow: 0 0 1px #fff
+		letter-spacing: 14px
+		opacity: 0.8
+		transform: rotateY(0deg)
+	
+	85% 
+		text-shadow: 0 0 1px #fff
+		opacity: 0.8
+		transform: rotateY(0deg) translateZ(100px)
+	
+	100% 
+		text-shadow: 0 0 10px #fff
+		opacity: 0
+		transform: translateZ(130px)
+		pointer-events: none
+	
+
+
+.os-phrases h2:nth-child(8) > span > span > span 
+	font-size: 30px
+	animation: FadeInOut 4s linear 40s forwards
+
+@keyframes FadeInOut 
+	0% 
+		opacity: 0
+		text-shadow: 0 0 50px #fff
+	
+	30% 
+		opacity: 0.8
+		text-shadow: 0 0 1px #fff
+
+	70% 
+		opacity: 0.8
+		text-shadow: 0 0 1px #fff
+
+	
+	100% 
+		opacity: 0
+		text-shadow: 0 0 50px #fff
+	
+
+
+/* Bold words */
+.os-phrases h2:first-child .word3,
+.os-phrases h2:nth-child(2) .word2,
+.os-phrases h2:nth-child(4) .word2 
+	font-weight: 600
+
+.social
+	//width: 60px
+	//height: 60px
+	position: fixed
+	z-index: 100
+	border: none
+	left: 20px
+	top: 20px
+
+
+// section book page
+
+//#book-page 
+//	width: 100%
+//	height: 100%
+//	position: absolute
+//	overflow: hidden
+//	background: #000
+//	opacity: 1
+.book-ui-layer 
+	z-index: 300
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background: url(/img/bottom-gradient.png) bottom repeat-x
+	.toggle-layer
+		width: 100%
+		height: 100%
+		position: absolute
+	.gradient-layer
+		position: absolute
+		height: 100%
+		width: 160px
+		top: 0
+		right: 0
+		background-size: 100%
+		background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,.49))
+		visibility: inherit
+		opacity: 1
+.handle 
+	float: right
+	top: 50%
+	margin: -138px 35px 0 0
+	position: relative
+	width: 45px
+	z-index: 400
+	.handle-slider 
+		overflow: hidden
+		height: 276px
+		.handle-grip
+			position: absolute
+			z-index: 1
+			margin-top: -22.5px
+			width: 45px
+			height: 45px
+			border: 2px solid #2db90c
+			border-radius: 23px
+			//js add ???
+			transform: translate3d(0px, 138px, 0px)
+			cursor: pointer
+			touch-action: none
+			z-index: 1002
+			:hover
+				border-width: 3px
+			.icons
+				opacity: 1
+				transform: scale(1,1)
+			.icons, 
+			.playhead
+				position: absolute
+				width: 100%
+				height: 100%
+				transition: transform 525ms cubic-bezier(0.62,.1,0,1),opacity 408ms cubic-bezier(0.62,.1,0,1)
+				pointer-events: none
+			.icon
+				fill: #fff
+				width: 12px
+				position: absolute
+				left: 50%
+				margin-left: -6px
+			.icon.up-fast 
+				top: -10px
+				transform: scale(-.5,-.5)
+				opacity: 0
+				width: 12px
+				height: 7px
+			.icon.icon-up
+				transform: rotate(180deg)
+				transition: top 200ms ease-out,transform 200ms ease-out,opacity 200ms ease-out
+				:hover
+					margin-top: -1px
+			.icon.up
+				top: 9px
+				transform: scale(-1.05,-1.05)
+				opacity: 1
+				width: 12px
+				height: 7px
+			.icon.down
+				bottom: 9px
+				transform: scale(1.05,1.05)
+				opacity: 1
+				width: 12px
+				height: 7px
+			.icon.icon-down 
+				transition: bottom 200ms ease-out,transform 200ms ease-out,opacity 200ms ease-out
+				:hover
+					margin-bottom: -1px
+			.icon.down-fast
+				bottom: -10px
+				transform: scale(0.5,.5)
+				opacity: 0
+				width: 12px
+				height: 7px
+			.playhead
+				opacity: 0
+				transform: scale(0.32,.32)
+				position: absolute
+				width: 100%
+				height: 100%
+				transition: transform 525ms cubic-bezier(0.62,.1,0,1),opacity 408ms cubic-bezier(0.62,.1,0,1)
+				pointer-events: none
+			.icon.icon-play
+				width: 20px
+				height: 12px
+				margin-left: -10px
+				bottom: 13px
+			.handle-counter
+				pointer-events: none
+				position: absolute
+				top: 50%
+				width: 72px
+				margin-top: -6px
+				margin-left: -86px
+				color: #fff
+				font-family: Roboto,sans-serif
+				font-weight: 700
+				font-size: 11px
+				text-transform: uppercase
+				letter-spacing: .2px
+				line-height: 1
+				text-align: right
+				span
+					opacity: .4
+				.counter-dash
+					position: absolute
+					width: 9px
+					height: 2px
+					top: 5px
+					right: -12px
+					background-color: rgba(255,255,255,.5)
+		.handle-edge
+			position: absolute
+			background-color: rgba(255,255,255,.2)
+			left: 50%
+			width: 40px
+			height: 2px
+			margin-left: -20px
+			opacity: 0
+			transition: width 248ms cubic-bezier(0.22,0,0,.84),margin-left 248ms cubic-bezier(0.22,0,0,.84),opacity 192ms ease-out
+			transition-delay: 30ms
+			.edge-top
+				top: -2px
+			.edge-bottom
+				bottom: -2px
+		.handle-track
+			position: relative
+			height: 485px
+			mask: url(/img/icon-book_handle_mask.svg)
+			.handle-track-center
+				position: absolute
+				width: 18px
+				height: 18px
+				left: 50%
+				top: 138px
+				margin-left: -9px
+				margin-top: -9px
+				border-radius: 9px
+				border: 3px solid #FFF
+				background-color: #262222
+			.handle-track-bar
+				width: 2px
+				height: 276px
+				margin: 0 auto
+				background-color: rgba(255,255,255,.2)
+
+.handle 
+	.handle-reader-button
+		position: absolute
+		.prev-reader
+			top: -33px
+
+
+		.reader-button-dot
+			width: 13px
+			height: 13px
+			border-radius: 7px
+			background-color: #fff
+			position: absolute
+			left: 16px
+			bottom: -29px
+			opacity: .22
+			transition: transform 628ms cubic-bezier(0.82,.12,0,.77),opacity 497ms cubic-bezier(0.82,.12,0,.77)
+			transition-delay: 284ms
+			:active
+				opacity: .6
+			:hover
+				opacity: 0
+				transform: scale(0,0)
+				transition-duration: 500ms
+		.reader-button-tablet
+			display: none
+
+.reader-info
+	position: absolute
+	width: 400px
+	.image
+		width: 45px
+		height: 45px
+		border: 2px solid #2db90c
+		border-radius: 25px
+		opacity: 0
+		transform: scale(1.12,1.12)
+		transition: opacity 412ms cubic-bezier(0.86,.04,.4,.62) 52ms,transform 1452ms cubic-bezier(0.32,.05,.02,.93) 22ms
+		float: left
+		margin-right: 4px
+		overflow: hidden
+		
+	.info
+		padding: 5px 9px 0 0
+		color: #fff
+		overflow: hidden
+		float: left
+		text-align: right
+		margin-left: -400px
+		width: 340px
+		pointer-events: none
+		h1
+			font-family: Roboto,sans-serif
+			font-weight: 700
+			font-size: 10px
+			text-transform: uppercase
+			letter-spacing: .2px
+			text-align: right
+			padding-bottom: 8px
+			opacity: 0
+			transition: opacity 480ms cubic-bezier(0.65,.4,.42,.92)
+		h2
+			font-family: Roboto,sans-serif
+			font-weight: 500
+			font-size: 16px
+			opacity: 0
+			transition: opacity 698ms cubic-bezier(0.65,.4,.42,.92)
+.reader-info.active
+	.info
+		h1,
+		h2
+			opacity: 1
+			margin-left: 0		
+		.image
+			transform: scale(1,1)
+			opacity: 1
+.handle .handle-reader-button
+.handle 
+	.handle-reader-button
+		position: absolute
+		.next-reader
+			bottom: 12px
+
+.handle.scrub-bar.playing 
+	.handle-slider
+		.handle-grip
+			.icons
+				opacity: 0
+				transform: scale(1.42,1.42)
+				transition-delay: 220ms
+				transition-duration: 234ms
+			.playhead
+				opacity: 1
+				transform: scale(1,1)
+				transition-delay: 348ms
+
+.center
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%,-50%)
+.uppercase
+	text-transform: uppercase
+
+.book-footer
+	position: absolute
+	bottom: 0
+	left: 0
+	height: 2.6875em
+	width: 100%
+	background-color: #0D0D0D
+	.btn-footer-chapter
+		height: 2.6875em
+		cursor: pointer
+		user-select: none
+		.arrow-up 
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			margin-left: .625em
+			width: 1.5625em
+			height: 1.5625em
+			border-radius: 50%
+			border: solid 1px #2db90c
+			.arrow-up-inner
+				margin-top: -1px
+				width: 0
+				height: 0
+				border-left: .3125em solid transparent
+				border-right: .3125em solid transparent
+				border-bottom: .3125em solid #fff
+
+	h3.footer-book-info
+		color: #fff
+		font-weight: 600
+		font-size: .8125em
+		letter-spacing: .0625em
+		margin-top: .9375em
+
+
+.book-footer 
+	ul 
+		padding: 0
+		margin: 0
+	li
+		padding: 0
+		margin: 0
+		list-style: none
+
+	.footer-book-list
+		position: absolute
+		top: 0
+		right: 0
+		svg
+			fill: #fff
+			stroke: #fff
+		li 
+			position: relative
+			float: right
+			width: 3.75em
+			height: 2.6875em
+		li:nth-child(2)
+			border-left: solid 1px #303030
+			border-right: solid 1px #303030
+		a
+			display: block
+			opacity: 1
+		.btn-footer-book-share 
+			svg
+				width: 2em
+				height: 2em
+.share-list
+	margin: 0
+	padding: 0
+	li
+		float: left
+		display: inline-block
+		margin-right: 1.25em
+	.icon-share
+		fill: #a5a5a5
+		position: relative
+	.icon-gplus
+		width: 1.375em
+		height: .9375em
+
+.book-footer
+	.share-navigation
+		position: absolute
+		left: -7.5em
+		padding: .8125em 0 0 1.25em
+		.share-list
+			width: 11.25em
+
+.audio-controls-panel
+	user-select: none
+	.audio-controls-slider-mask
+		height: 2.6875em
+		width: 15em
+		left: -15em
+		position: relative
+		overflow: hidden
+	.audio-controls-inner
+		transform: translateX("100%")
+		border-left: solid 1px #303030
+		height: 100%
+	.btn-audio-controls-music
+		height: 2.6875em
+		width: 2.1875em
+		top: .25em
+		right: .8125em
+		cursor: pointer
+		position: absolute
+		svg
+			position: absolute
+			top: .625em
+			left: .625em
+			width: 1.1875em
+			height: 1em
+	.audio-controls-slider
+		height: 100%
+		width: 10em
+		position: absolute
+		left: 1em
+	.audio-controls-slider-inner
+		top: .9375em
+		position: absolute
+		overflow: hidden
+		height: .9375em
+		width: 9.375em
+		left: .625em
+	.audio-controls-bg-highlight
+		width: 10em
+		height: .1875em
+		position: absolute
+		top: 5px
+		background: #b5b5b5
+	.audio-controls-bg
+		width: 10em
+		height: .1875em
+		position: absolute
+		top: 5px
+		background: #474546
+	.audio-scrubber
+		user-select: none
+		position: relative
+		top: .5625em
+		width: .8125em
+		height: .8125em
+		transform: translate3d(32.928px, 0px, 0px)
+		touch-action: none
+		z-index: 1003
+	.audio-scrubber-inner
+		user-select: none
+		width: 1.625em
+		height: 1.625em
+		border-radius: 50%
+		background: #000
+		border: 4px solid #fff
+		transition: background 300ms ease-out
+	.btn-audio-control-volume
+		height: 2.6875em
+		width: 3.75em
+		top: .25em
+		right: 0
+		cursor: pointer
+		position: absolute
+		svg
+			position: absolute
+			top: .625em
+			left: 1.25em
+			width: 1.1875em
+			height: 1em
