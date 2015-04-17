@@ -3,7 +3,7 @@
 body
 	font-family: "Raleway", sans-serif
 	font-weight: normal
-	font-size: 14px
+	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.42857
@@ -956,6 +956,17 @@ $h: 3px
 //	overflow: hidden
 //	background: #000
 //	opacity: 1
+ul
+	padding: 0
+	margin: 0
+li
+	padding: 0
+	margin: 0
+	list-style: none
+	display: list-item
+
+
+
 .book-ui-layer 
 	z-index: 300
 	position: absolute
@@ -963,7 +974,7 @@ $h: 3px
 	top: 0
 	width: 100%
 	height: 100%
-	background: url(/img/bottom-gradient.png) bottom repeat-x
+	background: url(../img/bottom-gradient.png) bottom repeat-x
 	.toggle-layer
 		width: 100%
 		height: 100%
@@ -1106,7 +1117,7 @@ $h: 3px
 		.handle-track
 			position: relative
 			height: 485px
-			mask: url(/img/icon-book_handle_mask.svg)
+			mask: url(../img/icon-book_handle_mask.svg)
 			.handle-track-center
 				position: absolute
 				width: 18px
@@ -1263,16 +1274,15 @@ $h: 3px
 		letter-spacing: .0625em
 		margin-top: .9375em
 
+ul 
+	padding: 0
+	margin: 0
+li
+	padding: 0
+	margin: 0
+	list-style: none
 
 .book-footer 
-	ul 
-		padding: 0
-		margin: 0
-	li
-		padding: 0
-		margin: 0
-		list-style: none
-
 	.footer-book-list
 		position: absolute
 		top: 0
@@ -1280,12 +1290,12 @@ $h: 3px
 		svg
 			fill: #fff
 			stroke: #fff
-		li 
+		>li 
 			position: relative
 			float: right
 			width: 3.75em
 			height: 2.6875em
-		li:nth-child(2)
+		>li:nth-child(2)
 			border-left: solid 1px #303030
 			border-right: solid 1px #303030
 		a
@@ -1308,6 +1318,16 @@ $h: 3px
 	.icon-gplus
 		width: 1.375em
 		height: .9375em
+	.icon-twitter
+		width: 1.375em
+		height: .875em
+	.icon-facebook
+		width: .625em
+		height: .9375em
+	.icon-vk
+		width: 1.75em
+		height: .8125em
+
 
 .book-footer
 	.share-navigation
@@ -1396,3 +1416,216 @@ $h: 3px
 			left: 1.25em
 			width: 1.1875em
 			height: 1em
+.book-header
+	font-weight: 500
+	position: absolute
+	top: 0
+	left: 0
+	height: 5em
+	width: 100%
+	opacity: 1
+	.logo-google_plus
+		width: 13em
+		height: 3.25em
+		left: 0
+		top: 1em
+		position: absolute
+		fill: #fff
+		opacity: 1
+		transition: opacity .5s ease-in-out
+		z-index: 99
+	.book-header-list
+		position: absolute
+		bottom: 0
+		right: 2.1875em
+		height: 2.8125em
+		text-align: right
+		li 
+			float: left
+	.book-reader-indicator
+		cursor: pointer
+		position: relative
+		width: 28.125em
+		height: 2.8125em
+		opacity: 1
+		transition: opacity .5s ease-in-out
+		z-index: 99
+	.book-name-mask
+		height: 1.875em
+		width: 100%
+		overflow: hidden
+		position: relative
+	.book-name-item
+		position: absolute
+		top: 0
+		right: 0
+		h2
+			font-size: 1.5em
+			color: #fff
+	.book-location-mask
+		height: 1em
+		width: 100%
+		overflow: hidden
+		position: relative
+	.book-location-item
+		position: absolute
+		top: 0
+		right: 0
+		opacity: .6
+		font-weight: 600
+		span
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			height: 1.0625em
+		svg
+			width: 15px
+			height: 18px
+			fill: #fff
+		h2
+			font-size: .6875em
+			color: #fff
+			display: inline-block
+			position: relative
+	.book-video-controls
+		position: relative
+		width: 7.5em
+		z-index: 101
+	.button 
+		position: relative
+		width: 2.8125em
+		height: 2.8125em
+		border: .125em solid rgba(255,255,255,.5)
+		border-radius: 50%
+		float: left
+		margin-left: .9375em
+		cursor: pointer
+		border-color: rgba(255, 255, 255, 0.5)
+	.book-menu
+		position: relative
+		h2
+			color: #fff
+			font-size: .8em
+			font-weight: 600
+			margin-top: -.0625em
+			line-height: 1em
+			position: absolute
+	.toggle-inner
+		position: absolute
+		width: 100%
+		height: 100%
+	.book-video-controls-play
+		width: 0
+		height: 0
+		margin: 11px 0 0 16px
+		position: absolute
+		border-top: 9px solid transparent
+		border-bottom: 9px solid transparent
+		border-left: 12px solid #fff
+		opacity: 0
+	.book-video-controls-pause
+		position: relative
+		width: .75em
+		height: .8125em
+		margin: 14px 15px
+		opacity: 1
+		.pause-bar-mask
+			position: absolute
+			top: 0
+			width: .375em
+			height: .8125em
+			overflow: hidden
+		.pause-bar-mask:nth-child(1)
+			left: 0
+			.pause-bar
+				left: 0
+		.pause-bar-mask:nth-child(2)
+			right: 0
+			.pause-bar
+				right: 0
+		.pause-bar
+			width: .25em
+			height: .8125em
+			position: absolute
+			background: #fff
+	
+figure 
+	margin: 1em 40px
+	
+
+.overlay-book-menu
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 200
+	clip-path: url(#svg-icon-landing_themes)
+
+	.statistics-container
+		width: 60em
+
+	.overlay-bg
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.83)
+		top: 0
+		left: 0
+		cursor: pointer
+	.btn-close
+		width: 28px
+		position: absolute
+		top: 34px
+		right: 34px
+		cursor: pointer
+		.btn-bg_close
+			stroke: #a5a5a5
+		svg
+			position: absolute
+		svg.btn-bg_close
+			stroke: #c7cac8
+		.btn-fg_close
+			stroke: #fff
+		svg.btn-fg_close
+			stroke: #a5a5a5
+
+.ui-scrubbing 
+	.return-to-line
+		display: none!important
+
+.return-to-line 
+	position: absolute
+	left: 40px
+	top: 35px
+	display: none
+	cursor: pointer
+	z-index: 200
+	.rtl-button
+		display: inline-block
+		vertical-align: middle
+		width: 2.8125em
+		height: 2.8125em
+		border: .125em solid rgba(255,255,255,.5)
+		border-radius: 50%
+		margin-right: -.25em
+		transition: all .2s ease-in-out
+		.icon
+			width: 1.0625em
+			height: 1.25em
+			margin: .625em auto 0
+			svg
+				width: 100%
+				height: 100%
+				fill: rgba(255,255,255,.8)
+
+	.rtl-label
+		display: inline-block
+		vertical-align: middle
+		color: rgba(255,255,255,.5)
+		font-size: .6875em
+		white-space: nowrap
+		margin-left: 1.25em
+		opacity: 0
+		transform: translateX(-10px)
+		transition: all .2s ease-in-out
