@@ -1103,10 +1103,10 @@ li {
         margin: 0 auto;
         background-color: rgba(255, 255, 255, 0.2); }
 
+.handle .handle-reader-button.prev-reader {
+  top: -33px; }
 .handle .handle-reader-button {
   position: absolute; }
-  .handle .handle-reader-button .prev-reader {
-    top: -33px; }
   .handle .handle-reader-button .reader-button-dot {
     width: 13px;
     height: 13px;
@@ -1119,11 +1119,16 @@ li {
     -webkit-transition: -webkit-transform 628ms cubic-bezier(0.82, 0.12, 0, 0.77), opacity 497ms cubic-bezier(0.82, 0.12, 0, 0.77);
             transition: transform 628ms cubic-bezier(0.82, 0.12, 0, 0.77), opacity 497ms cubic-bezier(0.82, 0.12, 0, 0.77);
     -webkit-transition-delay: 284ms;
-            transition-delay: 284ms;
-    active-opacity: 0.6;
-    hover-opacity: 0;
-    hover-transform: scale(0, 0);
-    hover-transition-duration: 500ms; }
+            transition-delay: 284ms; }
+  .handle .handle-reader-button .reader-button-dot.active {
+    opacity: 0.6; }
+  .handle .handle-reader-button .reader-button-dot.hover {
+    opacity: 0;
+    -webkit-transform: scale(0, 0);
+        -ms-transform: scale(0, 0);
+            transform: scale(0, 0);
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms; }
   .handle .handle-reader-button .reader-button-tablet {
     display: none; }
 
@@ -1182,10 +1187,10 @@ li {
           transform: scale(1, 1);
   opacity: 1; }
 
+.handle .handle-reader-button.next-reader {
+  bottom: 12px; }
 .handle .handle-reader-button {
   position: absolute; }
-  .handle .handle-reader-button .next-reader {
-    bottom: 12px; }
 
 .handle.scrub-bar.playing .handle-slider .handle-grip .icons {
   opacity: 0;

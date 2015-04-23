@@ -1136,10 +1136,12 @@ li
 				background-color: rgba(255,255,255,.2)
 
 .handle 
+	.handle-reader-button.prev-reader
+		top: -33px
 	.handle-reader-button
 		position: absolute
-		.prev-reader
-			top: -33px
+		//.prev-reader
+		//	top: -33px
 
 
 		.reader-button-dot
@@ -1153,12 +1155,12 @@ li
 			opacity: .22
 			transition: transform 628ms cubic-bezier(0.82,.12,0,.77),opacity 497ms cubic-bezier(0.82,.12,0,.77)
 			transition-delay: 284ms
-			:active
-				opacity: .6
-			:hover
-				opacity: 0
-				transform: scale(0,0)
-				transition-duration: 500ms
+		.reader-button-dot.active
+			opacity: .6
+		.reader-button-dot.hover
+			opacity: 0
+			transform: scale(0,0)
+			transition-duration: 500ms
 		.reader-button-tablet
 			display: none
 
@@ -1211,13 +1213,13 @@ li
 		.image
 			transform: scale(1,1)
 			opacity: 1
-.handle .handle-reader-button
+
 .handle 
+	.handle-reader-button.next-reader
+		bottom: 12px
 	.handle-reader-button
 		position: absolute
-		.next-reader
-			bottom: 12px
-
+		
 .handle.scrub-bar.playing 
 	.handle-slider
 		.handle-grip

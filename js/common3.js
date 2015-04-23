@@ -1,6 +1,14 @@
 
 $(document).ready(function() {
 
+$(".reader-button-dot").hover( function(){
+	$(this).removeClass("active");
+	$(this).addClass("hover");
+ },
+  function() {
+	$(this).removeClass("hover");
+	$(this).addClass("active");
+});
 $(".audio-controls").hover( function(){
 //	$(this).css("transform","translate3d(0px, 0px, 0px)");
 //	$(this).css("opacity","0");
@@ -159,5 +167,6 @@ $(window).load(function() {
 	$(".js-volume-close-line").css("stroke-dasharray","50px");
 	$(".js-volume-close-line").css("stroke-dashoffset","50px");
 	$(".js-volume-waves").css("opacity","1");
+	$(".reader-button-dot").addClass("active");
 
 });
