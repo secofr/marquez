@@ -1,14 +1,28 @@
 
 $(document).ready(function() {
 
-$(".reader-button-dot").hover( function(){
-	$(this).removeClass("active");
-	$(this).addClass("hover");
+$(".prev-reader").hover( function(){
+	//$(this).removeClass("active");
+	$(".reader-button-dot.active", $(this)).addClass("hover");
+	$(".reader-button.reader-info", $(this)).addClass("active");
  },
   function() {
-	$(this).removeClass("hover");
-	$(this).addClass("active");
+	$(".reader-button-dot.active", $(this)).removeClass("hover");
+	$(".reader-button.reader-info", $(this)).removeClass("active");
+	//$(this).addClass("active");
 });
+
+$(".next-reader").hover( function(){
+	//$(this).removeClass("active");
+	$(".reader-button-dot.active", $(this)).addClass("hover");
+	$(".reader-button.reader-info", $(this)).addClass("active");
+ },
+  function() {
+	$(".reader-button-dot.active", $(this)).removeClass("hover");
+	$(".reader-button.reader-info", $(this)).removeClass("active");
+	//$(this).addClass("active");
+});
+
 $(".audio-controls").hover( function(){
 //	$(this).css("transform","translate3d(0px, 0px, 0px)");
 //	$(this).css("opacity","0");
@@ -21,7 +35,6 @@ $(".audio-controls").hover( function(){
 	$(".audio-scrubber").css("touch","none");
 	$(".audio-scrubber").css("cursor","pointer");
 	$(".js-volume-close-line").css("stroke-dasharray","50px");
-	
 	$(".js-volume-close-line").css("stroke-dashoffset","100px");
 	$(".js-volume-waves").css("opacity","0");
 
@@ -131,7 +144,7 @@ $(".book-menu").click(function() {
    //$(".button").hover(function(){$(this).fadeOut(100);$(this).fadeIn(500);});
 
 $(".toggle-inner").click(
-	function () { 
+	function () {
 		if (player.getPlayerState() == 2) {
 			player.playVideo();	
 			$(".book-video-controls-play").css("opacity","0");
@@ -167,6 +180,6 @@ $(window).load(function() {
 	$(".js-volume-close-line").css("stroke-dasharray","50px");
 	$(".js-volume-close-line").css("stroke-dashoffset","50px");
 	$(".js-volume-waves").css("opacity","1");
-	$(".reader-button-dot").addClass("active");
+	//$(".reader-button-dot").addClass("active");
 
 });
