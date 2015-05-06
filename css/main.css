@@ -1639,3 +1639,25 @@ figure {
             transform: translateX(-10px);
     -webkit-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out; }
+
+.subtitle {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 656px;
+  height: 160px;
+  text-align: justify;
+  cursor: pointer; }
+  .subtitle p.line {
+    font: 22px GeorgiaPro-Regular, sans-serif;
+    letter-spacing: 0.2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 656px;
+    line-height: 40px;
+    color: #fff;
+    position: absolute;
+    bottom: 0; }
